@@ -8,8 +8,6 @@
 
 ## Units
 
-![App Development with Swift - Units](./ADwS-Units.png)
-
 1. Getting Started with App Development
 2. Introduction to UIKit
 3. Navigation and Workflows
