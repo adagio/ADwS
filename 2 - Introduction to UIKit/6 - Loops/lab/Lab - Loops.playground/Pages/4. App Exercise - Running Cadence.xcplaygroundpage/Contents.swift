@@ -17,5 +17,9 @@ var testSteps = 0
  */
 testSteps = 0 
 
-
+while testSteps < 10 {
+    print("Take a step")
+    Thread.sleep(forTimeInterval: 60/cadence)
+    testSteps += 1
+}
 //: [Previous](@previous)  |  page 4 of 6  |  [Next: Exercise - Control Transfer Statements](@next)
