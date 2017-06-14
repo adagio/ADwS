@@ -5,23 +5,26 @@
  
  Declare a constant `userInputAge` of type `String` and assign it "34e" to simulate a typo while typing age. Then declare a constant `userAge` of type `Int` and use the `Int` initializer and pass in `userInputAge`. What error do you get?
 */
-
-
+let userInputAge: String = "34"
+let userAge: Int? = Int(userInputAge)
+print(userAge)
 /*:
  Go back and change the type of `userAge` to `Int?`, and print the value of `userAge`. Why is `userAge`'s value `nil`? Provide your answer in a comment or print statement below.
  */
-
+// Because the string provided can't be converted to an Int
 
 /*:
  Now go back and fix the typo on `userInputAge`. Is there anything about the value printed that seems off?
  
  Print `userAge` again, but this time unwrap `userAge` using the bang operator.
  */
-
+print(userAge!)
 
 /*:
  Now use optional binding to unwrap `userAge`. If `userAge` has a value, print it to the console.
  */
-
+if let theUserAge = userAge {
+    print(theUserAge)
+}
 
 //: page 1 of 6  |  [Next: App Exercise - Finding a Heart Rate](@next)
