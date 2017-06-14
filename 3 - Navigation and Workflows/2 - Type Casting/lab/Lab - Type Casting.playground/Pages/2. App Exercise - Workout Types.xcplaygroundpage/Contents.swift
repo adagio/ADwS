@@ -45,12 +45,24 @@ var workouts: [Workout] = [
 /*:
  Write simple functions called `describeRun(runningWorkout:)` and `describeSwim(swimmingWorkout:)` that take a `Run` object and a `Swim` object, respectively. Neither should return values. Each function should print a description of the workout, including the run's cadence or the swim's stroke. Time is represented in seconds, distance is represented in meters, and cadence is represented in steps per minute.
  */
+func describeRun(runningWourkout: Run) {
+    print("Ran \(runningWourkout.distance) meters in \(runningWourkout.time) secs., at \(runningWourkout.cadence) steps/m cadence")
+}
 
+func describeSwin(swimmingWourkout: Swim) {
+    print("Swam \(swimmingWourkout.distance) meters in \(swimmingWourkout.time) secs., at \(swimmingWourkout.stroke) stroke")
+}
 
 /*:
  Now loop through each workout in `workouts` and, using type casting, call either `describeRun(runningWorkout:)` or `describeSwim(swimmingWorkout:)` on each. Observe what is printed to the console.
  */
-
+for wk in workouts {
+    if let run = wk as? Run {
+        describeRun(runningWourkout: run)
+    } else if let swim = wk as? Swim {
+        describeSwin(swimmingWourkout: swim)
+    }
+}
 
 /*:
  
